@@ -20,3 +20,16 @@ SELECT DISTINCT varos FROM tanulok
 SELECT nev FROM tanulok ORDER BY atlag DESC
 5.5
 SELECT nev, atlag FROM tanulok ORDER BY atlag DESC 
+
+
+6.1
+SELECT nev FROM tanulok WHERE eletkor >= 17 AND atlag >= 4
+6.2
+SELECT nev, varos FROM tanulok WHERE varos = 'Budapest' OR varos = 'Érd'
+6.3
+SELECT nev, osztaly FROM tanulok WHERE NOT osztaly = '10.A
+6.4
+SELECT nev, osztaly, atlag FROM tanulok WHERE osztaly = '10.A' OR osztaly = '10.B' AND  atlag >= 3.5 ORDER BY atlag DESC 
+6.5
+SELECT nev, varos, osztaly, atlag FROM tanulok WHERE (varos = 'Budapest' OR varos = 'Érd') AND atlag >= 4 AND NOT osztaly = '11.B'
+
